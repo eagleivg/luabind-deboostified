@@ -56,6 +56,22 @@ private:
 	int m_top;
 };
 
+static void* __cdecl luabind_allocator(void* context, const void* pointer, size_t const size)
+{
+    if (!size)
+    {
+        void* non_const_pointer = const_cast<void*>(pointer);
+        free(non_const_pointer);
+        return nullptr;
+    }
+    if (!pointer)
+    {
+        return malloc(size);
+    }
+    void* non_const_pointer = const_cast<void*>(pointer);
+    return realloc(non_const_pointer, size);
+}
+
 lua_state::lua_state()
 	: m_state(luaL_newstate())
 {
@@ -68,6 +84,7 @@ lua_state::lua_state()
 	lua_baselibopen(m_state);
 #endif
 	m_top = lua_gettop(m_state);
+    luabind::allocator = &luabind_allocator;
 	luabind::open(m_state);
 }
 
