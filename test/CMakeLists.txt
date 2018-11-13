@@ -53,7 +53,7 @@ set(TESTS
 	user_defined_converter
 	vector_of_object
 	virtual_inheritance
-#	yield
+	yield
 )
 
 add_library(test_main STATIC main.cpp)
