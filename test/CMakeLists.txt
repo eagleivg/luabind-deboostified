@@ -49,7 +49,6 @@ set(TESTS
 	smart_ptr_attributes
 	super_leak
 	table
-#	tag_function
 	unsigned_int
 	user_defined_converter
 	vector_of_object
