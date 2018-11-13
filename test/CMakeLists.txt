@@ -8,8 +8,8 @@
 # compile-only tests
 set(TESTS
 	abstract_base
-#	adopt
-#	adopt_wrapper
+	adopt
+	adopt_wrapper
 	attributes
 	automatic_smart_ptr
 	back_reference

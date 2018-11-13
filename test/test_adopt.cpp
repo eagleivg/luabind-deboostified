@@ -53,8 +53,7 @@ void test_main(lua_State* L)
     module(L) [
 		class_<Base, no_bases, default_holder, Base_wrap>("Base")
 			.def(constructor<>()),
-
-		def("take_ownership", &take_ownership, adopt_policy<1>()),
+		def("take_ownership", &take_ownership, policy::adopt<1>()),
         def("not_null", &not_null)
     ];
 
