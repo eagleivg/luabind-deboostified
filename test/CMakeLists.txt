@@ -29,7 +29,7 @@ set(TESTS
 	held_type
 	implicit_cast
 	implicit_raw
-#	iterator
+	iterator
 #	lua_classes
 	null_pointer
 #	object
