@@ -140,6 +140,7 @@ void test_main(lua_State* L)
 		"a = nil\n"
 		"f(a)",
 		"No matching overload found, candidates:\n"
-		"int f(int)");
+		"int f(int)\n"
+		"Passed arguments [1]: nil (nil)\n");
 }
 
