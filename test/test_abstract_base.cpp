@@ -89,11 +89,11 @@ void test_main(lua_State* L)
     DOSTRING_EXPECTED(L,
         "x = abstract()\n"
         "x:hello()\n"
-      , "std::runtime_error: 'Attempt to call nonexistent function'");
+      , "std::runtime_error: 'Attempt to call nonexistent function: hello'");
 
     DOSTRING_EXPECTED(L, 
         "call_hello(x)\n"
-      , "std::runtime_error: 'Attempt to call nonexistent function'");
+      , "std::runtime_error: 'Attempt to call nonexistent function: hello'");
     
     DOSTRING(L,
         "class 'concrete' (abstract)\n"
