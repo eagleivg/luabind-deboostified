@@ -67,9 +67,9 @@ set(LUABIND_API_HEADERS
 
 )
 
-set(LUABIND_DETAIL_API_HEADER
-	../luabind/detail/call.hpp
+set(LUABIND_DETAIL_API_HEADERS
 	../luabind/detail/call_function.hpp
+	../luabind/detail/call.hpp
 	../luabind/detail/call_member.hpp
 	../luabind/detail/call_shared.hpp
 	../luabind/detail/call_traits.hpp
@@ -77,7 +77,6 @@ set(LUABIND_DETAIL_API_HEADER
 	../luabind/detail/class_rep.hpp
 	../luabind/detail/constructor.hpp
 	../luabind/detail/conversion_storage.hpp
-	../luabind/detail/convert_to_lua.hpp
 	../luabind/detail/crtp_iterator.hpp
 	../luabind/detail/debug.hpp
 	../luabind/detail/decorate_type.hpp
@@ -85,29 +84,25 @@ set(LUABIND_DETAIL_API_HEADER
 	../luabind/detail/enum_maker.hpp
 	../luabind/detail/format_signature.hpp
 	../luabind/detail/garbage_collector.hpp
-	../luabind/detail/has_get_pointer.hpp
 	../luabind/detail/inheritance.hpp
 	../luabind/detail/instance_holder.hpp
 	../luabind/detail/link_compatibility.hpp
 	../luabind/detail/make_instance.hpp
 	../luabind/detail/meta.hpp
-	../luabind/detail/most_derived.hpp
 	../luabind/detail/object.hpp
 	../luabind/detail/object_rep.hpp
 	../luabind/detail/open.hpp
 	../luabind/detail/operator_id.hpp
 	../luabind/detail/other.hpp
 	../luabind/detail/pcall.hpp
-	../luabind/detail/pointee_sizeof.hpp
-	../luabind/detail/pointee_typeid.hpp
 	../luabind/detail/policy.hpp
 	../luabind/detail/primitives.hpp
 	../luabind/detail/property.hpp
+	../luabind/detail/push_to_lua.hpp
 	../luabind/detail/ref.hpp
 	../luabind/detail/signature_match.hpp
 	../luabind/detail/stack_utils.hpp
-	../luabind/detail/typetraits.hpp
-	../luabind/detail/yes_no.hpp
+	../luabind/detail/type_traits.hpp
 )
 
 set(LUABIND_DEFAULT_POLICIES_HEADERS
