@@ -53,6 +53,7 @@ set(TESTS
 	user_defined_converter
 	vector_of_object
 	virtual_inheritance
+	xray_types
 	yield
 )
 
